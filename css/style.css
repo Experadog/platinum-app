@@ -1,0 +1,251 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+a {
+  color: #696969;
+  text-decoration: none;
+}
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+}
+.header {
+  padding: 50px 0;
+  width: 100%;
+  min-height: 800px;
+  position: relative;
+  z-index:10;
+  margin-bottom: 130px;
+  object-fit: cover;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(57, 57, 57, 0.5) 100%), url(../pictures/building.png) center / cover ;
+}
+.container {
+  max-width: 1240px;
+  margin: 0 100px;
+  box-sizing: content-box;
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 178px;
+  max-width: 900px;
+}
+p{
+  padding: 0;
+  margin: 0;
+
+}
+.navbar_content .first_content {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 70px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1733B8;
+  margin-bottom: 30px;
+
+}
+.second_content {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #696969;
+
+}
+.navbar .header_ru{
+  font-size: 16px;
+  font-weight: 400px;
+  font-style: normal;
+  line-height: 20px;
+  color: #696969;
+  text-decoration: none;
+}
+
+.list_menu {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: left;
+  transition: 0.7s ease;
+}
+
+.list_menu:hover {
+  color: #1733B8;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  margin: 4px 0;
+  background-color: #0a0a0b;
+  border-radius: 30%;
+  box-shadow: 0 0 10px rgb(179, 169, 235);
+  cursor: pointer;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+.navbar_list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: #696969;
+}
+
+.navbar_symbols {
+  display: flex;
+  align-items: center;
+  flex-wrap:wrap ;
+  gap: 40px;
+  row-gap: 25px;
+  width: 400px;
+  position: absolute;
+  bottom: 30px;
+}
+
+
+@media(max-width:968px){
+  
+  .header {
+    min-height: 750px;
+    margin-bottom: 100px;
+  }  
+  .navbar_list {
+    gap: 50px;
+  }
+  .list_menu {
+    font-size: 15px;
+  }
+  .navbar_content .first_content {
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .second_content {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #696969;
+  
+  }
+}
+
+ul{
+  list-style: none;
+}
+
+@media(max-width:768px){
+  .hamburger {
+    display: block;
+    z-index: 3;
+    position: absolute;
+    right: 60px;
+  }
+  .container {
+    margin: 0 60px;
+
+  }
+  .header {
+    min-height: 500px;
+  }
+  .header_ru {
+    display: none;
+  }
+  .navbar_list {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    gap: 0;
+    flex-direction: column;
+    background-color: #1733B8;
+    width: 100%;
+    /* min-height: 60vh; */
+    text-align: center;
+    transition: 0.3s ;
+  }
+  .navbar_list a {
+    color: #fff;
+  }
+  .list_menu {
+    padding: 20px 15%;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 15px;
+  }
+
+  .second_content {
+    display: none;
+  }
+
+  .navbar_symbols {
+    display: none;
+  }
+
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+
+  }
+
+  .navbar_list.active {
+    left: 0;
+  }
+}
+
+@media(max-width:400px){
+  .container {
+    margin: 0 16px;
+  }
+  .hamburger {
+    right: 16px;
+  }
+  .list_menu {
+    padding: 20px 15%;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 15px;
+  }
+  .first_content {
+    font-family: Roboto;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+
+  }
+
+
+}
